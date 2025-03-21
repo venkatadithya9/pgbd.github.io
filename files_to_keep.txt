@@ -1,0 +1,57 @@
+assets/
+    Batch_single.png
+    Validation.png
+    semantic_teaser.png
+    gradcam.png
+    mapping_graph.png
+    Block_distill.png
+    block_synth.png
+    pratio_final.png
+    clean_data.png
+    lambda_abl.png
+    spider_all.png
+    dem_spider.png
+    radar_plot_DEM_CIFAR.png
+    tsne.drawio.png
+    abl_alpha.png
+
+figures/
+    blockDiag.tex
+    validation_combined.tex
+    semantic_data.tex
+    gradcam.tex
+    mapping_Vp.tex
+    poison_rate_effect.tex
+    clean_data_size_effect.tex
+    lambda_abl.tex
+    spider_all_dem.tex
+
+Supple/
+    distillaion_block.tex
+    synth_block.tex
+    abl_target_label.tex
+    abl_model_size.tex.tex
+    abl_alpha.tex
+    abl_kmedoids.tex
+    abl_kmeans_k.tex
+    abl_trigger.tex
+    delta_sched.tex
+    abl_pipeline.tex
+    distill.tex
+    spider_plots.tex
+    DEM_all.tex
+    tsne.tex
+
+
+tables/
+    model_sanitization_comparision.tex
+    mainRes_new.tex
+    adaptive_attacks.tex
+    variations_mean.tex
+    abl_variations.tex
+    abl_all2all.tex
+    abl_vgg.tex
+    abl_dinov2
+
+
+3a_algo.tex

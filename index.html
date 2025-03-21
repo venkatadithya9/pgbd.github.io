@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Concept Distillation: Leveraging Human-Centered
+Explanations for Model Improvement">
+  <meta name="keywords" content="Concept Distillation, CAVs, Concepts, XAI">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prototype Guided Backdoor Defense</title>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/PGBD.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  
+</head>
+
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Prototype Guided Backdoor Defense</h1>
+          <!-- <h2 class="title is-3 publication-venue">NeurIPS 2023</h1> -->
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a>Venkat Adithya A<sup>1️⃣</sup></a>,</span>
+              <span class="author-block">
+                  <a>Sunayana Samavedam<sup>1️⃣</sup></a>,</span>
+              <span class="author-block">
+                <a href="https://sophont01.github.io/">Saurabh Saini</a><sup>1️⃣</sup>,</span>
+              <span class="author-block">
+                <a href="https://avani17101.github.io/">Avani Gupta<sup>2️⃣</sup></a>,</span>
+              <span class="author-block">
+                <a href="https://faculty.iiit.ac.in/~pjn/">P J Narayanan</a><sup>1️⃣</sup>,
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1️⃣</sup>CVIT, KCIS, IIIT Hyderabad</span>
+              <span class="author-block"><sup>2️⃣</sup>M42, UAE</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2311.1530" 
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+					<a href="https://arxiv.org/abs/2311.1530"
+						class="external-link button is-normal is-rounded is-dark">
+						<span class="icon">
+							<i class="ai ai-arxiv"></i>
+						</span>
+						<span>arXiv</span>
+					</a>
+                </span>
+                <!-- Video Link. -->
+                <span class="link-block">
+					<a href="https://youtu.be/0uFH0Or8klM"
+						class="external-link button is-normal is-rounded is-dark">
+						<span class="icon">
+							<i class="fab fa-youtube"></i>
+						</span>
+						<span>Video</span>
+					</a>
+				</span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/avani17101/CD" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- PosterLink. -->
+                 <!--
+                <span class="link-block">
+                  <a  href="docs/Neurips_Poster.pdf" role="button">
+                  <a href="docs/Neurips_Poster.pdf" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-i"></i>
+                    </span>
+                    <span>Poster</span>
+                  </a>
+                </span>
+              -->
+
+                <!-- SlidesLink. -->
+                 <!--
+                <span class="link-block">
+                  <a  href="docs/Neurips_Poster.pdf" role="button">
+                  <a href="https://docs.google.com/presentation/d/1SozecUNEOf8ljPsDwiKbqzDgw0eHMQfgwi4xkumrans/edit?usp=sharing" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-i"></i>
+                    </span>
+                    <span>PPT</span>
+                  </a>
+                </span>
+              -->
+
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<center> 
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/watch?v=0uFH0Or8klM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+<video width="560" height="315" controls>
+  <source src="static/videos/pgbd_explanation.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<section class="section">
+	<div class="container is-max-desktop">
+		<!-- Abstract. -->
+		<div class="columns is-centered has-text-centered">
+			<div class="column is-four-fifths">
+				<h2 class="title is-3">Abstract</h2>
+				<div class="content has-text-justified">
+				<p>
+					Deep learning models are susceptible to a variety of ‘backdoor attacks’ involving a malicious attacker perturbing a
+          small subset of training data with a trigger that causes misclassification into a target class. Various triggers have been
+          employed effectively, including semantic triggers, which are easily realizable in real world without requiring attacker
+          to manipulate the image. Robustness in defense across all types of triggers is a crucial and unsolved problem. To
+          this end, we propose Prototype Guided Backdoor Defense (PGBD), a robust post-hoc defense that scales across all
+          trigger types, including previously unsolved semantic triggers. PGBD uses a novel sanitization loss in a fine-tuning 
+          step for defense. PGBD permits easy adaptation utilizing available attack knowledge. We observe better or on-par
+          performance across all settings. We also present a new semantic attack based on the occluded celebrity faces dataset
+          as a new benchmark and defend it successfully.
+				</p>
+				</div>
+			</div>
+		</div>
+    </div>
+  </section>
+
+  <div class="item item-fullbody">
+    <img src="static/images/Batch_diag-Teaser.png" id="fullbody"  width="50%" height="50%">
+    
+  </div>
+
+
+
+<br>
+<br>
+<h2 class="title is-3">Our main contributions</h2>
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+
+      <!-- Video 1 -->
+      <div class="column">
+        <div class="content">
+          <img src="static/images/spider_all.png" width="100%">
+          <p>A robust and scalable backdoor defense that achieves state of the are results across all attack variations.</p>
+        </div>
+      </div>
+
+      <!-- Video 2 -->
+      <div class="column">
+        <div class="content">
+          <img src="static/images/Batch_single.png" width="100%">
+          <p>Defense configurable to all types of attack scenarios and defense settings by leveraging the geometric relations in the activation space of backdoored models.</p>
+        </div>
+      </div>
+
+      <!-- Video 3 -->
+      <div class="column">
+        <div class="content">
+          <img src="static/images/semantic_teaser.png" width="100%">
+          <p>A new public semantic attack dataset consisting of completely real image based attacks, and sythetically modified image based attacks. And a first time successfull defense of such attacks.</p>
+          <!-- Additional text here -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<br>
+
+<h2 class="title is-3">Results</h2>
+
+<div class="item item-fullbody">
+  <img src="static/images/results_table.png" id="fullbody"  width="50%" height="50%">
+  
+</div>
+<!-- NEED TO ADD THIS AFTER UPLOADING IN ARXIV -->
+  <!-- <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@inproceedings{gupta2023concept,
+        title={Concept Distillation: Leveraging Human-Centered Explanations for Model Improvement},
+        author={Gupta, Avani and Saini, Saurabh and Narayanan, PJ},
+        booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
+        year={2023}
+      }</code></pre>
+    </div>
+  </section> -->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>. It is borrowing this <a
+                href="https://github.com/nerfies/nerfies.github.io">source code</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div hidden="hidden">
+	<script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=XFkX9yDAINaX-IcWo2Y1JPMQjMSlNo-z-isZSYW2_jo"></script>
+  </div>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3XKFVVQ22N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3XKFVVQ22N');
+</script>
+</body>
+</html>
