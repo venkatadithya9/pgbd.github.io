@@ -1,4 +1,4 @@
-# Concept Distillation
+# Prototype Guided Backdoor Defense
 
 Source code for the website: [Prototype Guided Backdoor Defense
 Explanations for Model Improvement](https://venkatad2001.github.io/pgbd/).
