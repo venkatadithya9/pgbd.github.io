@@ -176,7 +176,7 @@ Explanations for Model Improvement">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
 
-      <!-- Video 1 -->
+      <!-- Image 1 -->
       <div class="column">
         <div class="content">
           <img src="static/images/spider_all.png" width="100%">
@@ -184,19 +184,19 @@ Explanations for Model Improvement">
         </div>
       </div>
 
-      <!-- Video 2 -->
+      <!-- Image 2 -->
       <div class="column">
         <div class="content">
           <img src="static/images/Batch_single.png" width="100%">
-          <p>Defense configurable to all types of attack scenarios and defense settings by leveraging the class-level geometric relations in the activation space of backdoored models.</p>
+          <p>Defense configurable to all types of attack scenarios and defense settings by leveraging the class-level geometric relations in the activation space of backdoored models. Prototype Activation Vectors (<i>V</i> ) are leveraged to sanitize the model. Depending on the extent of attack knowledge, the type and usage of PAV to perform model sanitization can be determined.</p>
         </div>
       </div>
 
-      <!-- Video 3 -->
+      <!-- Image 3 -->
       <div class="column">
         <div class="content">
           <img src="static/images/semantic_teaser.png" width="100%">
-          <p>A new public semantic attack dataset consisting of completely real image based attacks, and sythetically modified image based attacks. And a first time successfull defense of such attacks.</p>
+          <p>A new public semantic attack dataset consisting of completely real image based attacks, and sythetically modified image based attacks. Additionally, our semantic attack features three varitions: 1) (Sunglasses) Diverse triggers from a single concept, where triggers are real world objects present in the original image, 2) Diverse triggers from a single concept, where triggers are synthetically generated and added post-hoc to semantically valid locaitons in the image, and 3) A single unique trigger added post-hoc to semantically valid locations in the image. PGBD is a first time successfull defense against such semantic attacks. Results show best defnese across all three types of triggers.</p>
           <!-- Additional text here -->
         </div>
       </div>
@@ -215,9 +215,10 @@ Explanations for Model Improvement">
 <h2 class="title is-2">Gradcam Visualization</h2>
 
 <div class="item item-fullbody">
-  <img src="images/gradcam.png" id="fullbody"  width="60%" height="60%">
+  <img src="images/gradcam.png" id="fullbody"  width="50%%" height="50%%">
+  <div class="column" style="text-align: center; width: 50%; margin: 0 auto;">
   <p><i>Grad-CAM</i> visualizations of clean and backdoored images before and after applying PGBD. The model focuses on the trigger region in the backdoored image before applying PGBD, while after applying PGBD, the model focuses on the relevant object features.</p>
-  
+  </div>
 </div>
 <!-- NEED TO ADD THIS AFTER UPLOADING IN ARXIV -->
   <section class="section" id="BibTeX">
