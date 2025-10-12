@@ -35,7 +35,7 @@ Explanations for Model Improvement">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Prototype Guided Backdoor Defense</h1>
+          <h1 class="title is-1 publication-title">Prototype Guided Backdoor Defense via Activation Space Manipualtion</h1>
           <h2 class="title is-3 publication-venue">ICCV 2025</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
@@ -153,15 +153,8 @@ Explanations for Model Improvement">
 				<h2 class="title is-3">Abstract</h2>
 				<div class="content has-text-justified">
 				<p>
-					Deep learning models are susceptible to a variety of ‘backdoor attacks’ involving a malicious attacker perturbing a
-          small subset of training data with a trigger that causes misclassification into a target class. Various triggers have been
-          employed effectively, including semantic triggers, which are easily realizable in real world without requiring attacker
-          to manipulate the image. Robustness in defense across all types of triggers is a crucial and unsolved problem. To
-          this end, we propose Prototype Guided Backdoor Defense (PGBD), a robust post-hoc defense that scales across all
-          trigger types, including previously unsolved semantic triggers. PGBD uses a novel sanitization loss in a fine-tuning 
-          step for defense. PGBD permits easy adaptation utilizing available attack knowledge. We observe better or on-par
-          performance across all settings. We also present a new semantic attack based on the occluded celebrity faces dataset
-          as a new benchmark and defend it successfully.
+          Deep learning models are susceptible to <i>backdoor attacks</i> involving malicious perturbation of some training data with a <i>trigger</i> to force misclassification to a target class. Various triggers have been used including semantic triggers that are easily realizable in real-wold settings. We present Prototype Guided Backdoor Defense (PGBD), a robust post-hoc defense that scales across different <i>trigger</i> types, including previously unsolved <i>semantic triggers</i>. PGBD exploits displacements in the geometric spaces of activations to penalize movement and alignmet towards the <i>trigger</i>. This is done using a novel sanitization loss of a post-hoc fine-tuning step. This approach scales to all types of attacks and <i>triggers</i>, and achieves better performance across settings. We also present the first defense against semantic attacks on a new celebrity face images dataset. Activation spaces can provide rich clues to enhance deep learning models in different ways.
+
 				</p>
 				</div>
 			</div>
@@ -178,7 +171,7 @@ Explanations for Model Improvement">
 
 <br>
 <br>
-<h2 class="title is-3">Our main contributions</h2>
+<h2 class="title is-2">Our main contributions</h2>
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
@@ -187,7 +180,7 @@ Explanations for Model Improvement">
       <div class="column">
         <div class="content">
           <img src="static/images/spider_all.png" width="100%">
-          <p>A robust and scalable backdoor defense that achieves state of the are results across all attack variations.</p>
+          <p>A robust and scalable backdoor defense that achieves state of the are results across all attack variations. PGBD shows constitent performance across differnet attack types (patch, functional, adaptive, dynamic, and semantic) and also across previously difficult attack settings of low poisoning ratios.</p>
         </div>
       </div>
 
@@ -195,7 +188,7 @@ Explanations for Model Improvement">
       <div class="column">
         <div class="content">
           <img src="static/images/Batch_single.png" width="100%">
-          <p>Defense configurable to all types of attack scenarios and defense settings by leveraging the geometric relations in the activation space of backdoored models.</p>
+          <p>Defense configurable to all types of attack scenarios and defense settings by leveraging the class-level geometric relations in the activation space of backdoored models.</p>
         </div>
       </div>
 
@@ -213,24 +206,31 @@ Explanations for Model Improvement">
 </section>
 <br>
 
-<h2 class="title is-3">Results</h2>
+<h2 class="title is-2">Results</h2>
 
 <div class="item item-fullbody">
-  <img src="static/images/results_table.png" id="fullbody"  width="50%" height="50%">
+  <img src="static/images/results_table.png" id="fullbody"  width="60%" height="60%">
+  
+</div>
+<h2 class="title is-2">Gradcam Visualization</h2>
+
+<div class="item item-fullbody">
+  <img src="static/images/gradcam.png" id="fullbody"  width="60%" height="60%">
+  <p><i>Grad-CAM</i> visualizations of clean and backdoored images before and after applying PGBD. The model focuses on the trigger region in the backdoored image before applying PGBD, while after applying PGBD, the model focuses on the relevant object features.</p>
   
 </div>
 <!-- NEED TO ADD THIS AFTER UPLOADING IN ARXIV -->
-  <!-- <section class="section" id="BibTeX">
+  <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@inproceedings{gupta2023concept,
-        title={Concept Distillation: Leveraging Human-Centered Explanations for Model Improvement},
-        author={Gupta, Avani and Saini, Saurabh and Narayanan, PJ},
-        booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
-        year={2023}
-      }</code></pre>
+      <pre><code>@article{amula2025prototype,
+          title={Prototype Guided Backdoor Defense},
+          author={Amula, Venkat Adithya and Samavedam, Sunayana and Saini, Saurabh and Gupta, Avani and others},
+          journal={arXiv preprint arXiv:2503.20925},
+          year={2025}
+        }</code></pre>
     </div>
-  </section> -->
+  </section>
 
   <footer class="footer">
     <div class="container">
