@@ -1,7 +1,9 @@
 # Prototype Guided Backdoor Defense
 
 Source code for the website: [Prototype Guided Backdoor Defense
-Explanations for Model Improvement](https://venkatad2001.github.io/pgbd/).
+via Activation Space Manipulation](https://venkatad2001.github.io/pgbd/).
+
+Official implementation of the method: [PGBD](https://github.com/venkatadithya9/PGBD).
 <!-- 
 ## BibTex
 ```
